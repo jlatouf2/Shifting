@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'YourFontName'; /*a name to be used later*/
+    src: url('./mochary/Mochary_PERSONAL_USE_ONLY.ttf'); /*URL to font*/
+}
+
+.bob {
+    font-family: YourFontName;
+}
+
+@font-face {
+    font-family: 'YourFontName2'; /*a name to be used later*/
+    src: url('./eutemia-i/Eutemia.ttf'); /*URL to font*/
+}
+
+
+.bob2 {
+    font-family: YourFontName2;
+
+}
+
+@font-face {
+    font-family: 'Playball'; /*a name to be used later*/
+    src: url('./typesetit_playball/Playball.ttf'); /*URL to font*/
+}
+
+
+.bob3 {
+    font-family: Playball;
+
+}

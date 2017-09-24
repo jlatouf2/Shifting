@@ -1,0 +1,124 @@
+
+
+
+<div class="container-fluid">
+  <h1 style="margin-bottom:50px">{{userdata.facebook.name}}</h1>
+  <div class="row" style="margin-bottom:20px; ">
+    <div class="col-sm-2" style="background-color:lavender;">  <label>Name</label></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"> {{userdata._id}} <button type="button" class="btn btn-default">Edit</button></div>
+
+  </div>
+  <div class="row" style="margin-bottom:20px; ">
+    <div class="col-sm-2" style="background-color:lavender;"> <label>Email</label></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"> {{useremail}} <button type="button" class="btn btn-default">Edit</button></div>
+
+  </div>
+
+  <div class="row" style="margin-bottom:20px; ">
+    <div class="col-sm-2" style="background-color:lavender;"> <label>Name</label></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">{{username}} <button type="button" class="btn btn-default">Edit</button></div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2" style="background-color:lavender;"> <label>ID</label></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"> {{userid}} <button type="button" class="btn btn-default">Edit</button></div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-2" style="background-color:lavender;"> <label>Token</label></div>
+    <div class="col-sm-4" style="background-color:lavenderblush;"> {{usertoken}} <button type="button" class="btn btn-default">Edit</button></div>
+
+  </div>
+
+
+</div>
+
+
+
+<!--
+
+
+
+<div ng-controller="ProfileController">
+  <table>
+    <tr>
+      <th>userEmail</th>
+      <th>userPassword</th>
+    </tr>
+    <tr ng-repeat="userda in userdata">
+      <td>{{userEmail}}</td>
+      <td>{{userPassword}}</td>
+    </tr>
+  </table>
+</div>
+
+
+
+<h1>This is the profile page</h1>
+<div>
+  <p> This is the data from userName: </p>
+{{userdata}}
+</div>
+
+<br>
+
+<div>
+<p> This is the data from userInfo: </p> {{userInfo}}
+
+</div>
+
+<div>
+<p> This is the data from userEmail: </p> {{userEmail}}
+
+</div>
+
+
+<div>
+<p> This is the data from userPassword: </p> {{userPassword}}
+
+</div>
+
+
+
+
+<body ng-controller="">
+  <table>
+    <tr>
+      <th>Country</th>
+      <th>Population</th>
+    </tr>
+    <tr ng-repeat="country in countries">
+      <td>{{country.name}}</td>
+      <td>{{country.population}}</td>
+    </tr>
+  </table>
+</body>
+
+
+-->
+
+
+
+<!--
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Store</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="contact in contacts | filter:search | orderBy:'post_id'">
+				<td><a href="/#/storelines" data-target="#myModal" ng-click="grabStuff(contact.store)" class="list-group-item active">{{contact.store}}</td>
+				<td>
+					<a href="/#/contacts/{{$index}}" class="btn btn-default btn-xs">View</a>
+					<button class="btn btn-danger btn-xs" ng-click="delete($index)">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+-->

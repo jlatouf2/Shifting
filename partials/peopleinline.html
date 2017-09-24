@@ -1,0 +1,95 @@
+<div style="padding-left:50px; padding-right:50px; ">
+
+  <h1 class="bob3" style="text-align:center;">Store : {{grabStorename || 'StoreName Not Passed!'}} </h1>
+
+
+
+<div style="margin-bottom:30px">
+    <div class="row">
+      <!--
+			<div class="col-sm-12; well">
+				<h1  style="text-align: center;"> Lines Available in Store:
+					 {{grabLineNumber || 'Lines not passed!'}}</h1>
+			</div>
+-->
+      <div class="bob3" style="font-size:30px;text-align:center;">Lines Available in Store: : {{grabLineNumber || 'Lines not passed!'}} </div>
+
+    </div>
+		    <div class="row">
+						<button class="btn btn-default btn-xs"  ng-click="getNames()">Get Names</button>
+						<button class="btn btn-default btn-xs"  ng-click="postEmit()">Add Emit</button>
+
+						<button class="btn btn-default btn-xs"  ng-click="otherPage()">otherPage</button>
+
+        </div>
+
+				<div class="row">
+
+
+
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<!--
+  								<tr>
+  								<th><button class="btn btn-default btn-xs"  ng-click="delete($index)">Position</button>
+          					<button class="btn btn-default btn-xs"  ng-click="delete($index)">Distance</button>
+          					<button class="btn btn-default btn-xs"  ng-click="delete($index)">Other</button></th>
+  							</tr>
+    						-->
+
+          <!--
+						<tr>
+					    <th style="text-align: center;"> <a href="#"> <span class="glyphicon glyphicon-home"></span> Home</a></th>
+					    <th style="text-align: center;"><a href="#"> <span class="glyphicon glyphicon-home"></span> Profile</a></th>
+					    <th style="text-align: center;"><a href="#"> <span class="glyphicon glyphicon-home"></span> Messages</a></th>
+					</tr>
+            -->
+
+
+					<!--
+						<tr style="align=center">
+							<th><button class="btn btn-default btn-xs "   ng-click="delete($index)">Position</button></th>
+							<th><button class="btn btn-default btn-xs"  ng-click="delete($index)">Position</button></th>
+							<th><button class="btn btn-default btn-xs"  ng-click="delete($index)">Position</button></th>
+
+						</tr>
+					-->
+								<tr>
+									<th style="text-align: center;">Name</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style="text-align: center;"  ng-repeat="person in people | filter:search | orderBy:'phone'" >
+									<td > <a style="background-color:teal" href="/#/geo2" ng-click="grabName(contact.name)" class="list-group-item active ">
+                    <span class="glyphicon glyphicon-home"></span> {{person.local.email}}
+                    <button class="btn btn-danger btn-xs" style="float: right; " ng-click="removeName($index)">Delete</button>
+                  </td>
+
+                <!--	<td style="text-align: center;">          <span class="glyphicon glyphicon-camera"></span> {{people}} </td> -->
+                  <!--
+                  <td style="text-align: center;">
+										<a href="/#/contacts/{{$index}}" class="btn btn-default btn-xs">View</a>
+										<button class="btn btn-danger btn-xs" ng-click="removeName($index)">Delete</button>
+									</td>
+                -->
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+
+				</div>
+
+    </div>
+
+
+
+
+  <div>
+  	<div class="col">
+    		<div class="demo-content" >
+
+        </div>
+    </div>
+  </div>

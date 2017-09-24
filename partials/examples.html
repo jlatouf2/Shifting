@@ -1,0 +1,62 @@
+<div >
+  <!-- <div style="background-color: #4881ea">
+-->
+<h1 style="background-color: #4881ea; margin-top: 0;"> This is the examples page</h1>
+
+<div>
+First Name: <input ng-model="firstname" type="text">
+{{firstname}}
+</div>
+<div >
+Last Name: <input ng-model="lastname" type="text">
+{{lastname}}
+
+</div>
+<br>
+<strong>id</strong>:{{sess.data._id}}<br>
+<strong>email</strong>: {{sess.data.email}}<br>
+<strong>password</strong>: {{sess.data.token}} <br>
+<br>
+
+
+<button ng-click="fname()">Name</button>
+<button ng-click="bob()">Bob</button>
+<button ng-click="orangeData()">orangeData</button>
+<button ng-click="dateGrab()">dateGrab</button>
+<button ng-click="faceData()">FacebookData</button>
+
+cluntk{{countries}}
+<br>
+
+<div>
+  <h3>Grabdate Information</h3>
+Grabdate username: {{username}}
+  <br>
+Grabdate password: {{password}}
+</div>
+
+<br>
+
+<div  class="container"  ng-controller="ExampleController">
+	<h1>Angular.js Factory</h1>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Population</th>
+          <th>skills</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="country in countries | orderBy:'name'">
+          <td><a href="#">{{countries.name}}</a></td>
+          <td>{{countries.age}}</td>
+          <td>{{country.car}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

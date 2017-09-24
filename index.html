@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp" >
+
+   <head>
+      <title>AngularJS First Application</title>
+      <script src="//localhost:35729/livereload.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="css/style.css" rel="stylesheet">
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+      <script src="/socket.io/socket.io.js"></script>
+
+   </head>
+
+<body>
+
+<div>
+    <!--  NOTE: THIS IS THE PAGE HEADER -->
+ <div style="text-align: center; background-color:white; font-size: 30px;" >
+   <button class="glyphicon glyphicon-menu-left" onclick="goBack()" style="background-color:white; border-style: none; float: left; font-size: 15px; margin-top:10px; margin-left:10px"></button>
+   <span class="bob3" >Shift </span>
+   <button  ng-controller="firstController" ng-click="logoutFunction()" style="background-color:white; border-style: none; float: right; font-size: 15px; margin-top:10px; margin-right:10px">Log Out</button>
+ </div>
+
+
+
+
+<!--
+ <div style="color:white; text-align: center; background-color: #4881ea; vertical-align: middle;
+line-height: 50px;   font-size: 15px;" >
+   <span  style="">Stores Available </span>
+   <button class="glyphicon glyphicon-plus"  ng-controller="firstController" ng-click="logoutFunction()" style="line-height: 20px; background-color: #4881ea;  border-style: none; float: right; font-size: 15px; margin-top:10px; margin-right:10px"></button>
+ </div>
+-->
+
+ <!--  NOTE: NAVBAR -->
+
+
+
+     <nav class="navbar navbar-inverse" style="margin-bottom: 0;" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+                <a class="navbar-brand" href="/#/">WebiteName</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+
+              <ul  class="nav navbar-nav">
+                <li class="active"><a href="/#/">Home</a></li>
+                <li><a href="/#/examples">Examples</a></li>
+                <li><a href="/#/page">Page</a></li>
+                <li><a href="/#/add">Add</a></li>
+                <li><a href="/#/storeNames">StoreNames</a></li>
+                <li><a href="/#/storelines">Storelines</a></li>
+                <li><a href="/#/peopleline">Peopleline</a></li>
+
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a ng-hide="userdata" href="/#/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a ng-hide="userdata" href="/#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a ng-show="userdata" href="/#/profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <li><a ng-show="userdata" ng-controller="firstController" ng-click="logoutFunction()" ><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+
+<!-- TO END THE WHITE SPACE DELETE THE </nav> BUT MAKE SURE EACH PAGE IS CORRECT COLOR -->
+
+      <div >
+       <div ng-view ></div>
+     </div>
+
+      <!--
+      <div   class="container">
+       <div ng-view ></div>
+     </div>
+
+      <div  class="container-fluid" >
+       <div ng-view ></div>
+     </div>
+
+      <div>
+          <button  onclick="button1()">Press</button>
+      </div>
+
+
+      -->
+</div>
+      <script>
+
+      function goBack() {
+          window.history.back();
+      }
+
+      /*
+     **********************************
+      //THIS VAR SOCKET = IO() IS REQUIRED TO USE THE SOCKET.IO
+     **********************************
+*/
+      var socket = io();
+
+      socket.on('broadcast',function(data){
+          console.log(data.description);
+      });
+
+
+      socket.on('passInfoBack', function () {
+      console.log('this Passed Info Back from Button2!!!!')
+                 });
+
+      /*
+      function button1()  {
+        socket.emit('clientEvent', 'Sent an event from the client!');
+      console.log("Pressed")
+      }
+      */
+      </script>
+
+      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" src="js/controllers.js"></script>
+      <script type="text/javascript" src="js/services.js"></script>
+
+   </body>
+</html>

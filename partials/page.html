@@ -1,0 +1,89 @@
+<h1> This is the Page page</h1>
+
+<!-- LOCATION DATA WORKS! -->
+<p>Click the button to get your coordinates.</p>
+
+<button ng-click="getLocation()">Try It</button>
+
+<p id="demo"></p>
+<!-- LOCATION DATA WORKS! -->
+
+
+
+<table>
+  <tr>
+    <th>Country</th>
+    <th>Population</th>
+    <th>skills</th>
+
+  </tr>
+  <tr ng-repeat="country in countries">
+    <td>{{country.name}}</td>
+    <td>{{country.position}}</td>
+    <td>{{country.skills}}</td>
+  </tr>
+</table>
+
+
+
+<div class="container"  ng-controller="ContactController">
+
+
+	<h1>Angular.js Factory</h1>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Population</th>
+          <th>skills</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="country in countries | orderBy:'name'">
+          <td><a href="#">{{country.name}}</a></td>
+          <td>{{country.position}}</td>
+          <td>{{country.skills}} <button type="button" class="btn btn-default">Edit</button>
+</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!--
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Store</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="contact in contacts | filter:search | orderBy:'post_id'">
+				<td><a href="/#/storelines" data-target="#myModal" ng-click="grabStuff(contact.store)" class="list-group-item active">{{contact.store}}</td>
+				<td>
+					<a href="/#/contacts/{{$index}}" class="btn btn-default btn-xs">View</a>
+					<button class="btn btn-danger btn-xs" ng-click="delete($index)">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<button type="button" class="btn btn-primary">Primary</button>
+
+-->
+
+<!--
+
+<ul>
+  <li ng-repeat="country in countries">
+    <a href="#/{{country.name}}">{{country.name}}</a>
+  </li>
+</ul>
+
+-->
